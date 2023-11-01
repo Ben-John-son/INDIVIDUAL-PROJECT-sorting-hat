@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <div class="top">
+      <h1 class="words">Welcome to Hogwarts!</h1>
+    </div>
+    <div class="secondTop">
+      <h3 class="words">
+        Here are some random Harry Potter words that I am going to change later
+      </h3>
+    </div>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorting Hat</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h4 class="bodyText">
+        Here are some words that go above the "Start Button"
+      </h4>
+      <!-- <div class="mb-3">
+        <label for="nameBar" class="form-label">New Student</label>
+        <input
+          type="email"
+          class="form-control"
+          id="nameBar"
+          placeholder="Dedalus Diggle"
+        /> -->
+    </div>
+    <div id="bigBtn">
+      <button type="button" id="showBtn" class="btn btn-primary btn-lg">
+        What House Will it Be?
+      </button>
+      <div id="formBar"></div>
+
+      <!-- <div id="app"></div> -->
+    </div>
+    <div id="formCard"></div>
+    <div id="houseBtns">
+      <button id="gryffBtn" type="button" class="btn btn-danger">
+        Gryffindor
+      </button>
+      <button id="slythBtn" type="button" class="btn btn-success">
+        Slytherin
+      </button>
+      <button id="huffBtn" type="button" class="btn btn-warning">
+        Hufflepuff
+      </button>
+      <button id="ravBtn" type="button" class="btn btn-primary">
+        Ravenclaw
+      </button>
+    </div>
+    <div class="sorted">
+      <div id="firstYears" class="firstYear">
+        <div class="card1" style="width: 18rem" style="height: 20rem">
+          <div class="card-body">
+            <h5 class="card-title">First Year Students</h5>
+
+            <p id="firstYearBlock" class="card-text"></p>
+          </div>
+        </div>
+      </div>
+      <div class="voldy">
+        <div class="card2" style="width: 18rem" style="height: 20rem">
+          <div class="card-body">
+            <h5 class="card-title">Voldy's Lackeys</h5>
+
+            <p id="voldyBlock" class="card-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>

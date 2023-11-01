@@ -1,0 +1,101 @@
+.top {
+  display: flex;
+  flex-flow: row wrap;
+  border: black solid 1px;
+  /* align-content: center; */
+  justify-content: center;
+  padding: 10px;
+}
+
+.secondTop {
+  display: flex;
+  flex-flow: row wrap;
+  border: black solid 1px;
+  /* align-content: center; */
+  justify-content: center;
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  border: solid black 1px;
+
+  align-items: center;
+  padding: 10px;
+}
+
+.sorted {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: center;
+  border: 1px solid black;
+  flex-basis: 40%;
+  padding: 20px;
+  justify-content: space-around;
+}
+
+/* .firstYear {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 10px;
+  border: 1px black solid;
+} */
+
+/* .voldy {
+  display: flex;
+  border: 1px solid black;
+} */
+
+.row g-0 {
+  border: black 1px solid;
+}
+
+#sortFy {
+  display: flex;
+  flex-flow: row wrap;
+  justify-items: flex-start;
+  align-items: flex-start;
+  flex-basis: 20%;
+}
+
+#bigBtn {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  padding: 10px;
+}
+
+.card1 {
+  border: 1px black solid;
+  padding: 20px;
+  gap: 2px;
+}
+.card2 {
+  border: solid black 1px;
+  padding: 20px;
+}
+
+#formBar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+#formCard {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+#houseBtns {
+  display: flex;
+  flex-flow: row wrap;
+  justify-items: center;
+  justify-content: space-around;
+}
