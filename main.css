@@ -29,24 +29,27 @@
 .sorted {
   display: flex;
   flex-flow: row wrap;
-  align-content: flex-start;
-  justify-content: flex-start;
+  align-content: center;
+  justify-content: center;
+  border: 1px solid black;
+  flex-basis: 40%;
   padding: 20px;
+  justify-content: space-around;
 }
 
-.firstYear {
+/* .firstYear {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-start;
-  padding: 1px;
+  padding: 10px;
   border: 1px black solid;
-}
+} */
 
-.voldy {
+/* .voldy {
   display: flex;
   border: 1px solid black;
-}
+} */
 
 .row g-0 {
   border: black 1px solid;
@@ -58,4 +61,41 @@
   justify-items: flex-start;
   align-items: flex-start;
   flex-basis: 20%;
+}
+
+#bigBtn {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  padding: 10px;
+}
+
+.card1 {
+  border: 1px black solid;
+  padding: 20px;
+  gap: 2px;
+}
+.card2 {
+  border: solid black 1px;
+  padding: 20px;
+}
+
+#formBar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+#formCard {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+#houseBtns {
+  display: flex;
+  flex-flow: row wrap;
+  justify-items: center;
+  justify-content: space-around;
 }

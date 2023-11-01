@@ -36,58 +36,53 @@ const renderToDom = (array) => {
        <div class="card-body">
        <h3>${house.studentWho}</h3>
      <footer class="card-text">${house.house}</footer>
-       <button class="btn btn-danger" id="delete--${house.id}">Expel</button>
+       <button class="deleteBtn" id="delete--${house.id}">Expel</button>
        </div>
      </div>
-  </div>
+  
  </div>`;
   }
-  const app = document.querySelector("#sortFy");
+  const app = document.querySelector("#firstYearBlock");
   app.innerHTML = domString;
+  // renderToDom(domString);
 };
-
+renderToDom(houses);
 // const renderToDom = (divId, content) => {
 //   const selectDiv = document.querySelector(divId);
 //   selectDiv.innerHTML = content;
 // };
-renderToDom(houses);
-const app = document.querySelector("#app");
 
-// const appearBtn = () => {
-//   const nameBar = `<div class="mb-3">
-//   <label for="exampleFormControlInput1" class="form-label">Name</label>
-//   <input type="email" class="form-control" id="student" placeholder="Dedalus Diggle">
-//   <button type="button" id="sort"
-
-//   class="btn btn-info">Sort!</button>
-// </div>`;
-
-//   renderToDom("#app", nameBar);
-// };
-
-// const studentCard = `<div class="mb-3">
-// <label for="exampleFormControlInput1" class="form-label">Name</label>
-// <input type="email" class="form-control" id="student" placeholder="Dedalus Diggle">
-// <button type="button" id="sort"
-
-// class="btn btn-info">Sort!</button>
-// </div>`;
-
-let newStudent = () => {
-  let nameHouse = houses[([0, 2], [1, 2], [2, 2], [3, 2])];
-  let newHouse = nameHouse[Math.floor(Math.random() * nameHouse)];
-  nameHouse += newHouse;
+const studentEnter = () => {
+  let newInfo = `<div  class="card border-dark mb-3" style="max-width: 18rem;">
+  <div class="card-header">Student Name</div>
+  <div class="card-body">
+    
+  <div id="entryForm" class="mb-3">
+  
+  <input type="text" required class="form-control" id="student" aria-describedby="emailHelp" />
+  <div id="sort">
+  <button  id="hitIt" class="btn btn-primary mb-2" >Sort!</button>
+  </div>
+</div>;
+  </div>
+ </div>`;
+  let app = document.querySelector("#formCard");
+  app.innerHTML = newInfo;
 };
 
-const createStudent = (e) => {
+const appear = document.querySelector("#showBtn");
+
+appear.addEventListener("click", studentEnter);
+
+let createStudent = (e) => {
   e.preventDefault();
-  // let studentArr = [];
+
   function imageFunc() {
-    if (house === "Gryffindor") {
+    if (houses.house === "Gryffindor") {
       return "https://www.color-hex.com/palettes/813.png";
-    } else if (house === "Slytherin") {
+    } else if (houses.house === "Slytherin") {
       return "https://www.color-hex.com/palettes/17239.png";
-    } else if (house === "Hufflepuff") {
+    } else if (houses.house === "Hufflepuff") {
       return "https://www.color-hex.com/palettes/816.png";
     } else {
       return "https://www.color-hex.com/palettes/85234.png";
@@ -100,26 +95,86 @@ const createStudent = (e) => {
     imageUrl: imageFunc(),
   };
   console.log("sorted!");
-  // studentArr += studentObj;
+
   houses.push(studentObj);
   renderToDom(houses);
   // form.reset();
 };
 
-const sortBtn = document.querySelector("#sort");
+const sortBtn = document.querySelector("#formCard");
 
 sortBtn.addEventListener("click", createStudent);
-//   domString += `<div class="card mb-3" style="max-width: 540px;">
-//   <div class="row g-0">
-//     <div class="col-md-4">
-//       <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/hogwarts-gryffindor-pattern-4-black-gryphon.jpg" class="img-fluid rounded-start" alt="...">
-//     </div>
-//     <div class="col-md-8">
-//       <div class="card-body">
-//         <h5 class="card-title">${student.name}</h5>
-//       <footer class="card-text">${student.house}</footer>
-//       <button class="btn btn-danger" id="delete--${student.id}">Expel</button>
-//       </div>
-//     </div>
-//   </div>
-// </div>`
+
+let slyth = document.querySelector("#slythBtn");
+let gryff = document.querySelector("#gryffBtn");
+let rav = document.querySelector("#ravBtn");
+let huff = document.querySelector("#huffBtn");
+
+const filter1 = () => {
+  console.log("clicked");
+  let gryffArr = [];
+  for (house of houses) {
+    if (house.house === "Gryffindor") {
+      gryffArr.push(house);
+    }
+  }
+
+  renderToDom(gryffArr);
+};
+
+gryff.addEventListener("click", filter1);
+
+const filter2 = () => {
+  console.log("clicked");
+  let slythArr = [];
+  for (house of houses) {
+    if (house.house === "Slytherin") {
+      slythArr.push(house);
+    }
+  }
+
+  renderToDom(slythArr);
+};
+
+slyth.addEventListener("click", filter2);
+
+const filter3 = () => {
+  console.log("clicked");
+  let huffArr = [];
+  for (house of houses) {
+    if (house.house === "Hufflepuff") {
+      huffArr.push(house);
+    }
+  }
+
+  renderToDom(huffArr);
+};
+
+huff.addEventListener("click", filter3);
+
+const filter4 = () => {
+  console.log("clicked");
+  let ravArr = [];
+  for (house of houses) {
+    if (house.house === "Ravenclaw") {
+      ravArr.push(house);
+    }
+  }
+
+  renderToDom(ravArr);
+};
+
+rav.addEventListener("click", filter4);
+
+let lackeys = document.querySelector(".deleteBtn");
+
+let expelled = (event) => {
+  let voldArr = [];
+  if (event.target.id.includes(".deleteBtn")) {
+    voldArr.push(house);
+  }
+  renderToDom(".voldy");
+  console.log("clicked");
+};
+
+// lackeys.addEventListener("click", expelled);
