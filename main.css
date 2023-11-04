@@ -1,3 +1,7 @@
+body {
+  background-image: url(https://st.depositphotos.com/68991526/61538/v/450/depositphotos_615380920-stock-illustration-hand-drawn-magical-things-vector.jpg);
+}
+
 .top {
   display: flex;
   flex-flow: row wrap;
@@ -7,6 +11,10 @@
   padding: 10px;
 }
 
+#showBtn {
+  font: rgb(105, 103, 103);
+  background-image: linear-gradient(rgb(236, 210, 236), purple);
+}
 .secondTop {
   display: flex;
   flex-flow: row wrap;
@@ -15,7 +23,17 @@
   justify-content: center;
   padding: 10px;
 }
+.bodyText {
+  color: rgb(207, 207, 18);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
 
+.words {
+  color: rgb(207, 207, 18);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
 .container {
   display: flex;
   flex-flow: column wrap;
@@ -26,6 +44,11 @@
   padding: 10px;
 }
 
+#nameEnter {
+  color: rgb(238, 238, 76);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
 .sorted {
   display: flex;
   flex-flow: row wrap;
@@ -68,15 +91,29 @@
   flex-flow: row wrap;
   justify-content: center;
   align-content: center;
+
   padding: 10px;
 }
 
 .card1 {
   border: 1px black solid;
+  background-image: linear-gradient(
+    white,
+    grey,
+    darkgrey,
+    rgb(83, 83, 231),
+    rgb(59, 58, 58)
+  );
   padding: 20px;
   gap: 2px;
 }
 .card2 {
+  background-image: linear-gradient(
+    rgb(209, 243, 209),
+    rgb(134, 224, 134),
+    rgb(1, 39, 1),
+    green
+  );
   border: solid black 1px;
   padding: 20px;
 }
@@ -98,4 +135,9 @@
   flex-flow: row wrap;
   justify-items: center;
   justify-content: space-around;
+}
+
+#sorter {
+  height: 75px;
+  width: 75x;
 }
