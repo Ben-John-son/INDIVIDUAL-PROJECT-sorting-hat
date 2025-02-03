@@ -95,9 +95,12 @@ let createStudent = () => {
     id: students.length + 1,
     name: document.querySelector("#floatingInput").value,
     house: random,
+    //imageUrl was not working with original function 'imageFunc' because imageUrl needs an initial value. By giving it a random image, it can be altered
     imageURl: 'https://www.itl.cat/pngfile/big/28-285319_hufflepuff-wallpapers-harry-potter-ravenclaw-hd.png'
   }
  
+
+  //This works because it pushes the new obj to the students array and then can be changed with the 'if' statement below before all students are rendered to div
   students.push(obj)  
 
   if (random === "Gryffindor") {
