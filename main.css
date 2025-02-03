@@ -30,6 +30,11 @@ margin-top: 50px;
 background-color: rgba(245, 245, 245, 0.733);
 }
 
+
+#sortCard {
+  display: flex;
+  flex-shrink: inherit;
+}
 .card {
   width: 500px;
   height: 15bh;
@@ -124,9 +129,10 @@ button {
 
 #good {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   flex-direction: column;
   align-items: center;
+
   /* flex-wrap: wrap;
   justify-content: center; */
   /* gap:10px; */
@@ -150,16 +156,17 @@ input {
 
 #studentCard {
   margin-top: 90px;
-  width: 20% !important;
+  width: 150px !important;
   /* width: 35% !important; */
-  height: 30vh !important;
+  height: 250px !important;
   margin-top: 0 3px;
   padding-top: 0;
   contain: content;
+  
 }
 
 img {
-  height: 14vh !important;
+  height: 100px !important;
 }
 
 #firstYear {
@@ -167,17 +174,22 @@ img {
   height: 40px;
   height: auto;
   margin-bottom: 0px;
+  
 }
 
 #goodTwo {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-flow:row wrap;
+  flex-shrink: 1;
+flex-grow: 1;
   height: auto;
   padding: 0;
   gap:10px;
   border: none;
   margin-top: -50px;
+
 }
 
 h2 {
