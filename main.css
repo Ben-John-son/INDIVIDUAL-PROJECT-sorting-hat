@@ -1,5 +1,10 @@
 body {
-  background-color: rgb(53, 53, 53);
+  background-image: url("https://steamuserimages-a.akamaihd.net/ugc/941712430421622208/53D01C1A44D2A2CF0C1E27192B7FD0ADB0AB7D58/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false");
+  background-size: cover;
+  font-family: 'SPQR', sans-serif;
+ 
+
+
 }
 
 header {
@@ -9,11 +14,13 @@ header {
     font-style: normal;
     color: rgb(180, 153, 1);
     margin-top: 30px;
-    
+    cursor: url('featherQuill.png');
+    font-family: 'Harry Potter', sans-serif;
 }
 
 h1 {
   font-size: 80px !important;
+  /* margin-top: 80px; */
 }
 
 #container {
@@ -27,23 +34,41 @@ h1 {
 width: 90%;
 /* border: 1px solid black; */
 margin-top: 50px;
-background-color: rgba(245, 245, 245, 0.733);
+/* background-color: rgba(245, 245, 245, 0.733); */
+  @media (max-width: 700px) and (min-width:200px) {
+    
+        width: 100%;
+        background-color: blue;
+      
+  }
 }
 
+#nameForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 #sortCard {
   display: flex;
   flex-shrink: inherit;
+  
 }
 .card {
   width: 500px;
   height: 15bh;
   background-color: bisque;
-  font-family: "Jacquard 24", serif;
+  font-family: 'SPQR', sans-serif;
+  /* font-family: 'SPQR Italic', sans-serif; */
+
   font-weight: 400;
   font-style: normal;
   color: rgb(0, 0, 0);
-  margin-top: 30px;
+  margin-top: 40px !important;
+  padding-top: 3px;
+  @media (max-width: 700px) and (min-width: 200px) {
+    width: 20%;
+  }
 }
 
 /* ul {
@@ -64,51 +89,78 @@ background-color: rgba(245, 245, 245, 0.733);
 /* width: 500px; */
   margin-top: 25px;
   width: 100%;
-
+  @media (max-width: 700px) and (min-width: 200px) {
+    width: 100%;
+  }
 }
 
 
 .btn-primary {
-  width: 60%;
+  width: 80%;
   /* margin-left: 5px;
   margin-right: 5px; */
+  @media (max-width: 700px) and (min-width: 200px) {
+    width: 100%;
+  }
 }
 
 #sortBtn {
   width: 50%;
+  background-color: black;
+  border: none;
+}
+
+#all {
+  background:linear-gradient(grey, rgb(85, 85, 85), rgb(56, 56, 56))
 }
 
 #gryf {
-  background-color: maroon;
+  background: linear-gradient(maroon, rgb(77, 1, 1), rgb(61, 0, 0));
   color: rgb(255, 217, 0);
 }
 
 #huff {
-  background-color: rgb(202, 182, 0);
+  background:linear-gradient(yellow, rgb(172, 172, 0), rgb(119, 119, 0));
   color: black;
 }
 
 #rave {
-  background-color: rgb(13, 57, 179);
+  background: linear-gradient(blue, rgb(0, 0, 177), rgb(0, 0, 126));
 }
 
 #sly {
-  background-color: rgb(0, 95, 0);
+  background: linear-gradient(rgb(0, 163, 0), rgb(0, 95, 0), rgb(0, 65, 0));
 }
 
 button {
-  font-family: "Jacquard 24", serif !important;
+  font-family: 'SPQR', sans-serif;
+
+
   font-weight: 400;
   font-style: normal;
   font-size: 30px !important;
   border: none !important;
+  @media (max-width: 500px) and (min-width: 200px) {
+    width: 50%;
+   }
 }
 
 #sortBtn {
   font-size: 20px;
-  width: 100px;
+  width: 150px;
   height: 58px;
   font-size: 25px;
+  @media (max-width: 500px) and (min-width: 300px) {
+    width: 50%;
+   }
+}
+
+#sortBtn:hover {
+  background: linear-gradient(rgb(157, 0, 189), purple, rgb(82, 0, 82))
+}
+
+#sortBtn:active {
+  background: linear-gradient(rgb(94, 0, 94), rgb(59, 0, 59), rgb(39, 0, 39));
 }
 
 #newForm {
@@ -116,7 +168,9 @@ button {
   flex-direction: row;
   gap: 10px;
   margin-top: 30px;
- 
+ @media (max-width: 500px) and (min-width: 200px) {
+  width: 50%;
+ }
 }
 
 #both {
@@ -125,6 +179,9 @@ button {
   width: 90%;
   margin-left: auto;
   margin-top: 20px;
+  @media (max-width: 500px) and (min-width: 200px) {
+    width: 50%;
+   }
 }
 
 #good {
@@ -137,21 +194,47 @@ button {
   justify-content: center; */
   /* gap:10px; */
   width: 40%;
-  height: 800px;
-  background-color: white;
+  height: 100%;
+  color: yellow;
+  background-color: rgb(88, 88, 88, 0.8) ;
+  border: 1px solid yellow;
   margin-right: 5%;
   text-align: center;
   padding: 0;
+  @media (max-width: 500px) and (min-width: 200px) {
+    width: 100%;
+   }
 }
 
 
  #bad {
-  width:40%;
-  background-color: white;
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(0, 255, 42);
+  background-color: rgb(88, 88, 88, 0.8) ;
+  border: 1px solid yellow;
+  /* flex-wrap: wrap;
+  justify-content: center; */
+  /* gap:10px; */
+  width: 40%;
+  height: 100%;
+
+  margin-right: 5%;
+  text-align: center;
+  padding: 0;
+  @media (max-width: 500px) and (min-width: 200px) {
+    width: 100%;
+   }
  }
 
 input {
+  
   width: 500px !important;
+  @media (max-width: 500px) and (min-width: 200px) {
+    width: 50%;
+   }
 }
 
 #studentCard {
@@ -159,14 +242,54 @@ input {
   width: 150px !important;
   /* width: 35% !important; */
   height: 250px !important;
-  margin-top: 0 3px;
+  /* margin-top: 0 3px; */
   padding-top: 0;
-  contain: content;
+  /* contain: content; */
+margin-bottom: 20px;
+@media (max-width: 500px) and (min-width: 200px) {
+  width: 20%;
+ }
   
 }
 
 img {
   height: 100px !important;
+  @media (max-width: 500px) and (min-width: 200px) {
+    width: 50%;
+   }
+}
+
+#floatingInput {
+ background: black;
+ opacity: 0.6;
+ color: yellow;
+ margin-bottom: 10px;
+}
+
+::placeholder {
+  color: yellow !important;
+  opacity: 1;
+}
+
+::-ms-input-placeholder { /* Edge 12 -18 */
+  color: yellow;
+}
+
+#subBtn {
+  background-color:black;
+  color: white !important;
+  width: 700px ;
+  height:40px;
+  font-size: 20px;
+  border: white 1px solid;
+}
+
+#subBtn:hover {
+  background-color: rgb(32, 32, 32);
+}
+
+#subBtn:active {
+  background-color: green;
 }
 
 #firstYear {
@@ -174,7 +297,9 @@ img {
   height: 40px;
   height: auto;
   margin-bottom: 0px;
-  
+  @media (max-width: 500px) and (min-width: 200px) {
+    width: 20%;
+   }
 }
 
 #goodTwo {
@@ -183,31 +308,91 @@ img {
   justify-content: center;
   flex-flow:row wrap;
   flex-shrink: 1;
-flex-grow: 1;
-  height: auto;
+  height: 100%;
   padding: 0;
   gap:10px;
   border: none;
-  margin-top: -50px;
-
+  /* margin-top: -50px; */
+  @media (max-width: 500px) and (min-width: 200px) {
+    width: 100%;
+   }
 }
 
 h2 {
-  margin-top: 0px;
+  margin-top: 20px;
 }
 
 #gryf:hover {
-  background-color: rgba(184, 0, 0, 0.973);
+  background: linear-gradient(rgb(189, 1, 1), rgb(131, 0, 0), rgb(121, 0, 0));
 }
 
 #huff:hover {
-  background-color:rgb(241, 218, 2);
+  background:linear-gradient(rgb(218, 185, 1), rgb(201, 181, 6), rgb(218, 196, 6));
 }
 
 #rave:hover {
-background-color: rgb(18, 76, 235);;
+background: linear-gradient(rgb(43, 72, 233),rgb(39, 59, 148), rgb(26, 34, 109));;
 }
 
 #sly:hover {
-  background-color: rgb(3, 138, 3);
+  background: linear-gradient(rgb(2, 124, 2),rgb(3, 138, 3),rgb(3, 138, 3));
+}
+
+#hug{
+  margin-bottom: 20px;
+}
+
+/* :placeholder-shown {
+  color: yellow;
+} */
+
+#badTwo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-flow:row wrap;
+  flex-shrink: 1;
+  height: 100%;
+  padding: 0;
+  gap:10px;
+  border: none;
+  /* margin-top: -50px; */
+  @media (max-width: 500px) and (min-width: 200px) {
+    width: 100%;
+   }
+}
+
+#formCard {
+  background-image: url('scroll.png') !important;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 498px;
+ 
+  /* height: auto; */
+}
+
+#all:hover {
+  background: linear-gradient(rgb(172, 172, 172), grey,rgb(80, 80, 80));
+}
+
+#all:active {
+  background: linear-gradient(rgb(92, 92, 92), rgb(61, 61, 61), rgb(36, 36, 36))
+}
+
+
+#gryf:active {
+  background:linear-gradient(rgb(83, 0, 0), rgb(66, 0, 0),rgb(46, 0, 0))
+}
+
+#huff:active {
+  background: linear-gradient(rgb(184, 141, 0), rgb(145, 118, 1),rgb(122, 100, 0))
+}
+
+#rave:active {
+  background: linear-gradient(rgb(0, 0, 167), rgb(0, 0, 105), rgb(0, 0, 73))
+}
+
+#sly:active {
+  background: linear-gradient(rgb(0, 95, 0), rgb(0, 54, 0), rgb(0, 51, 0))
 }
